@@ -1,0 +1,16 @@
+{
+  "name": "mf-react",
+  "version": "1.0.0",
+  "description": "Vocabulário:     - [Aplicação remota] é um app isolado que não é o host.",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd packages/app; npm run dev\" \"cd packages/contact; npm run dev\" \"cd packages/dashboard; npm run dev\" \"cd packages/home; npm run dev\" \"cd packages/store; npm run dev\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

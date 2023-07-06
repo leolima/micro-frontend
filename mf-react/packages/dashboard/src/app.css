@@ -1,0 +1,47 @@
+.foo {
+    background-color: rgb(185, 226, 210);
+    padding: 8px 16px;
+    > b {
+        font-weight: bold;
+    }
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    > .nav {
+        background-color: rgb(185, 226, 210);
+    }
+    > .nav li a{
+        text-decoration: underline;
+        cursor: pointer;
+        display: block;
+        padding: 8px;
+    }
+}
+
+.blocks {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px;
+}
+.blocks > * {
+    height: 200px;
+}
+.bg-1 {
+    flex: 1 0 100%;
+    background-color: blueviolet;    
+}
+.bg-2 {
+    flex: 1;
+    background-color: brown;    
+}
+.bg-3 {
+    flex: 1;
+    background-color: cornflowerblue;   
+}
+.bg-4 {
+    flex: 1;
+    background-color: darkgreen;
+}
