@@ -50,7 +50,8 @@ module.exports = {
                 './DashboardPage': './src/bootstrap'
             },
             remotes: {
-                StoreApp: "StoreApp@http://localhost:9004/remoteEntry.js",
+                // StoreApp: "StoreApp@http://localhost:9004/remoteEntry.js",
+                StoreNanoApp: "StoreNanoApp@http://localhost:9006/remoteEntry.js",
             },
             shared: {
                 ...deps,
@@ -60,6 +61,10 @@ module.exports = {
                   requiredVersion: deps.vue,
                   strictVersion: true,
                 },
+                '@nanostores/vue': {
+                    singleton: true,
+                    requiredVersion: deps['@nanostores/vue']
+                }
             },
         })
     ],

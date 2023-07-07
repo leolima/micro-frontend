@@ -1,33 +1,25 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import useStore from "StoreApp/store";
+import { useStore } from "@nanostores/react";
+import { $user, setUser } from 'StoreNanoApp/store';
 import "./login.css";
 
 function LoginForm({ onLogIn }) {
-  const [fields, setFields] = React.useState({});
-  const { user, setUser } = useStore();
   const navigate = useNavigate()
-
-  const onChange = React.useCallback((e) => {
-    setFields({ ...fields, [e.target.name]: e.target.value });
-  }, []);
+  const user = useStore($user);
 
   const onSubmit = React.useCallback(
     (e) => {
       e.preventDefault();
-      setUser(fields);
+      setUser(document.querySelector('#email')?.value);
       onLogIn && onLogIn();
       navigate('/dashboard');
     },
-    [setUser, fields]
+    [setUser]
   );
 
   if (user) {
-    return (
-      <div className="login-form">
-        <h2>Bem vindo {user.email}</h2>
-      </div>
-    )
+    return (<div className="login-form"><h2>Bem vindo {user}</h2></div>)
   }
 
   return (
@@ -35,7 +27,7 @@ function LoginForm({ onLogIn }) {
       <h2>Entre na sua conta</h2>
       <fieldset>
         <label htmlFor="email">E-mail</label>
-        <input id="email" type="email" name="email" value={fields?.email || ""} onChange={onChange} autoComplete="email" />
+        <input id="email" type="email" name="email" autoComplete="email" />
       </fieldset>
       <fieldset>
         <label htmlFor="password">Password</label>

@@ -32,6 +32,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@nanostores/vue": "^0.9.1",
     "vue": "^3.3.4"
   }
 }

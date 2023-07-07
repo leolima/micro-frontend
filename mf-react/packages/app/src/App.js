@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import useStore from "StoreApp/store";
+import { useStore } from "@nanostores/react";
+import { $user } from 'StoreNanoApp/store';
 import ProtectedRoute from "./components/ProtectedRoute";
 import Header from "./components/Header";
 import "./app.css";
@@ -10,7 +11,7 @@ const ContactPage = React.lazy(() => import("ContactApp/ContactPage"));
 const DashboardPage = React.lazy(() => import("./external/Dashboard"));
 
 const App = () => {
-  const { user } = useStore();
+  const user = useStore($user);
 
   return (
     <div>

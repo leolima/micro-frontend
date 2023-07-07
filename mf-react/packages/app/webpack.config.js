@@ -71,13 +71,10 @@ module.exports = () => {
       new ModuleFederationPlugin({
         name: "App",
         remotes: {
-          // HomeApp: "HomeApp@http://localhost:9002/remoteEntry.js",
-          // ContactApp: "ContactApp@http://localhost:9003/remoteEntry.js",
-          // StoreApp: "StoreApp@http://localhost:9004/remoteEntry.js",
           HomeApp: lazyLoadRemote('http://localhost:9002/remoteEntry.js', 'HomeApp'),
           ContactApp: lazyLoadRemote('http://localhost:9003/remoteEntry.js', 'ContactApp'),
-          StoreApp: lazyLoadRemote('http://localhost:9004/remoteEntry.js', 'StoreApp'),
           DashboardApp: lazyLoadRemote('http://localhost:9005/remoteEntry.js', 'DashboardApp'),
+          StoreNanoApp: lazyLoadRemote('http://localhost:9006/remoteEntry.js', 'StoreNanoApp'),
         },
         shared: {
           ...deps,
@@ -92,6 +89,10 @@ module.exports = () => {
           'react-router-dom': {
             singleton: true,
             requiredVersion: deps['react-router-dom']
+          },
+          '@nanostores/react': {
+            singleton: true,
+            requiredVersion: deps['@nanostores/react']
           }
         }
       }),

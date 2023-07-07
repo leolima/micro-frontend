@@ -1,6 +1,7 @@
 .foo {
     background-color: rgb(185, 226, 210);
-    padding: 8px 16px;
+    padding: 28px 16px;
+    text-align: center;
     > b {
         font-weight: bold;
     }

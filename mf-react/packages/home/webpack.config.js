@@ -50,7 +50,8 @@ module.exports = {
                 './HomePage': './src/Home'
             },
             remotes: {
-                StoreApp: "StoreApp@http://localhost:9004/remoteEntry.js",
+                //StoreApp: "StoreApp@http://localhost:9004/remoteEntry.js",
+                StoreNanoApp: "StoreNanoApp@http://localhost:9006/remoteEntry.js",
             },
             shared: {
                 ...deps,
@@ -65,7 +66,11 @@ module.exports = {
                 'react-router-dom': {
                     singleton: true,
                     requiredVersion: deps['react-router-dom']
-                  }
+                },
+                '@nanostores/react': {
+                    singleton: true,
+                    requiredVersion: deps['@nanostores/react']
+                }
               }
         })
     ]

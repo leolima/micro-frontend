@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <div class="foo"><b>Bem vindo</b> {{ user?.email }}</div>
+        <div class="foo"><b>Bem vindo</b> <u>{{ user }}</u>! Este é um componente <b>Vue</b></div>
         <div class="content">
             <div class="nav">
                 <ul>
@@ -28,12 +28,10 @@
     </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
+<script setup>
+import { useStore } from '@nanostores/vue';
+import { $user } from 'StoreNanoApp/store';
 import './app.css'
 
-export default defineComponent({
-  name: 'DashboardPage',
-  props: ['user']
-})
+const { value: user } = useStore($user);
 </script>
