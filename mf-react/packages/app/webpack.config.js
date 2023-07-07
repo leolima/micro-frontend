@@ -71,9 +71,9 @@ module.exports = () => {
       new ModuleFederationPlugin({
         name: "App",
         remotes: {
-          HomeApp: lazyLoadRemote('http://localhost:9002/remoteEntry.js', 'HomeApp'),
-          ContactApp: lazyLoadRemote('http://localhost:9003/remoteEntry.js', 'ContactApp'),
-          DashboardApp: lazyLoadRemote('http://localhost:9005/remoteEntry.js', 'DashboardApp'),
+          // HomeApp: lazyLoadRemote('http://localhost:9002/remoteEntry.js', 'HomeApp'),
+          // ContactApp: lazyLoadRemote('http://localhost:9003/remoteEntry.js', 'ContactApp'),
+          //DashboardApp: lazyLoadRemote('http://localhost:9005/remoteEntry.js', 'DashboardApp'),
           StoreNanoApp: lazyLoadRemote('http://localhost:9006/remoteEntry.js', 'StoreNanoApp'),
         },
         shared: {
