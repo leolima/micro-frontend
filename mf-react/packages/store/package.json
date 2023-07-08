@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "serve": "npx serve ./dist -p 9004",
+    "build": "webpack --mode=production",
     "dev": "webpack serve --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
