@@ -34,9 +34,7 @@ export default function Home(props) {
 
         <img src={props?.img} />
         <button onClick={() => setCount(count+1)}>count: {count}</button>
-        <p className={styles.description}>
-          Get started by editing <code className={styles.code}>pages/index.js</code>
-        </p>
+        
 
         <ReactRemoteComponent />
         <div className={styles.grid}>
