@@ -1,0 +1,25 @@
+{
+  "name": "store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx serve ./dist -p 9004",
+    "build": "webpack --mode=production",
+    "dev": "webpack serve --hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "zustand": "^4.3.8"
+  }
+}

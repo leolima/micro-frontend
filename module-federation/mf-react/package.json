@@ -1,0 +1,19 @@
+{
+  "name": "mf-react",
+  "version": "1.0.0",
+  "description": "A Sample of Module Federation using React as host",
+  "main": "index.js",
+  "scripts": {
+    "init": "concurrently \"cd packages/app; npm install\" \"cd packages/contact; npm install\" \"cd packages/dashboard; npm install\" \"cd packages/home; npm install\" \"cd packages/store; npm install\" \"cd packages/storeNano; npm install\"",
+    "serve": "concurrently \"cd packages/app; npm run serve\" \"cd packages/contact; npm run serve\" \"cd packages/dashboard; npm run serve\" \"cd packages/home; npm run serve\" \"cd packages/store; npm run serve\" \"cd packages/storeNano; npm run serve\"",
+    "build": "concurrently \"cd packages/app; npm run build\" \"cd packages/contact; npm run build\" \"cd packages/dashboard; npm run build\" \"cd packages/home; npm run build\" \"cd packages/store; npm run build\" \"cd packages/storeNano; npm run build\"",
+    "start": "concurrently \"cd packages/app; npm run dev\" \"cd packages/contact; npm run dev\" \"cd packages/dashboard; npm run dev\" \"cd packages/home; npm run dev\" \"cd packages/store; npm run dev\" \"cd packages/storeNano; npm run dev\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

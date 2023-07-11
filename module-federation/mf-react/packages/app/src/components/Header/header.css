@@ -1,0 +1,17 @@
+
+.header {
+    padding: 16px;
+    background: #eee;
+    display: flex;
+    justify-content: space-between;
+    
+    > nav {
+        display: flex;
+        gap: 16px;
+
+        > a {
+            color: #000;
+        }
+    
+    }
+}
